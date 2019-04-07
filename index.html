@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Train Scheduler</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+
+<div class="jumbotron">
+    <h1 class="display-4">Train Scheduler</h1>
+    <p class="lead">
+    <hr class="my-4">
+</div>
+
+<h3>Current Train Schedule</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Index</th>
+        <th scope="col">Train Name</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Frequency (min)</th>
+        <th scope="col">Next Arrival</th>
+        <th scope="col">Minutes Away</th>
+        </tr>
+    </thead>
+    <tbody id="train-table">
+        <tr>
+            <th scope="row">1</th>
+            <td>Train 1</td>
+            <td>Trenton</td>
+            <td>25</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Train 2</td>
+            <td>Princeton</td>
+            <td>30</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Add Train</h3>
+
+<form action="/action_page.php">
+    <div class="form-group">
+      <label for="name">Train Name</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="destination">Destination</label>
+      <input type="text" class="form-control" id="destination">
+    </div>
+    <div class="form-group">
+      <label for="time">First Train Time (HH:mm AM/PM)</label>
+      <input type="time" class="form-control" id="first-train-time">
+    </div>
+    <div class="form-group">
+      <label for="frequency">Frequency</label>
+      <input type="text" class="form-control" id="frequency">
+    </div>
+    <button type="submit" class="submitForm">Submit</button>
+  </form>
+
+<script type="text/javascript" src="app.js" ></script>
+
+</body>
+</html>
